@@ -1,4 +1,5 @@
 #include "Order.hpp"
+#include "Menu.hpp"
 
 Order::Order()
 {
@@ -22,6 +23,8 @@ void Order::collectCustomerDetails()
 
 void Order::getOrderDetails()
 {
+    std::string itemName;
+
     std::cout<<"Number of item: ";
     std::cin>>itemNo;
     int i = 0;
@@ -29,6 +32,8 @@ void Order::getOrderDetails()
     {
         std::cout<<"Enter item name: ";
         std::cin>>itemName;
+        FoodItem item = Menu::getItemByName(itemName);
+        items.push(item);
         std::cout<<"Enter quantity: ";
         std::cin>>quantity;
         i++;

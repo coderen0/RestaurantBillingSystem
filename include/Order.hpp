@@ -1,14 +1,17 @@
 #include<string>
 #include<iostream>
+#include <vector>
+
+#include "FoodItem.hpp"
 
 class Order
 {
-    private:
+    protected:
         std::string customerName;
         int tableNumber;
         int quantity;
         int itemNo;
-        std::string itemName;
+        std::vector<FoodItem> items;
         std::string paymentMethod;
         int orderID;
         

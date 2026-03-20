@@ -1,11 +1,15 @@
 #include<iostream>
+#include "FoodItem.hpp"
+#include<vector>
 
 class Menu
 {
-private:
-    int n;
-public:
-    Menu();
-    ~Menu();
+    private:
+        std::vector<FoodItem> itemList;
+    public:
+
+        static void showMainMenu();
+        FoodItem getItemByName(const std::string& itemName);
+        
 };
 

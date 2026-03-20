@@ -34,9 +34,14 @@ Each FOOD ITEM should have the following information.
 #include<iostream>
 #include "include/Billing.hpp"
 #include "include/Order.hpp"
+#include "include/Menu.hpp"
+
+// ASCII Art Header Menu
+
 
 int main(){
     Order order;
+    Menu menu;
     
     return 0;
 }
